@@ -1,0 +1,31 @@
+<h1>Listing transactions</h1>
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Location</th>
+    <th>Tdate</th>
+    <th>Amount</th>
+    <th>Details</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @transactions.each do |transaction| %>
+  <tr>
+    <td><%= transaction.location %></td>
+    <td><%= transaction.tdate %></td>
+    <td><%= transaction.amount %></td>
+    <td><%= transaction.details %></td>
+    <td><%= transaction.user.name %></td>
+    <td><%= link_to 'Show', transaction %></td>
+    <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+    <td><%= link_to 'Destroy', transaction, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Transaction', new_transaction_path %>

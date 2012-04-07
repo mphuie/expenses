@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  tdate: 2012-04-06
+  amount: 9.99
+  details: MyText
+  user_id: 1
+
+two:
+  location: MyString
+  tdate: 2012-04-06
+  amount: 9.99
+  details: MyText
+  user_id: 1

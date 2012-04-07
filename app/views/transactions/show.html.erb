@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @transaction.location %>
+</p>
+
+<p>
+  <b>Tdate:</b>
+  <%= @transaction.tdate %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @transaction.amount %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @transaction.details %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @transaction.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

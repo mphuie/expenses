@@ -1,0 +1,27 @@
+<h1>Expenses</h1>
+<br/>
+<table class="table table-bordered table-striped" id="expensetable">
+<thead>
+<tr>
+	<th>Date</th>
+	<th>Location</th>
+	
+	<th>Details</th>
+	<th>For Whom</th>
+	<th style="text-align:right;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<% @transactions.each do |t| %>
+<tr>
+	<td><%= t.tdate %></td>
+	<td><%= t.location %></td>
+	<td><%= t.details %></td>
+	<td><%= t.user.name %></td>
+	<td style="text-align:right;"><%= t.amount %></td>
+<tr>
+<% end %>
+</tbody>
+</table>
+
+<%= link_to 'New Transaction', new_transaction_path %>
